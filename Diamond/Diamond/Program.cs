@@ -1,19 +1,13 @@
-﻿namespace Diamond
+﻿using System;
+
+namespace Diamond
 {
     internal static class Program
     {
         private static void Main(string[] args)
         {
-            Draw('C');
+            var d = DiamondGenerator.CreateDiamond('C');
+            Console.WriteLine(d);
         }
-
-        private static void Draw(char c)
-        {
-
-
-
-        }
-
-
     }
 }
