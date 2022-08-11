@@ -55,20 +55,7 @@ public class Palindrome
 
         return true;
     }
-
-    [Benchmark]
-    public bool IsPalindrome_LoopSubString_NoVars()
-    {
-        var half = (int)Math.Floor(ToCheck.Length / 2d);
-
-        for (int i = 0; i < half; i++)
-        {
-            if (ToCheck.Substring(i, 1) != ToCheck.Substring(ToCheck.Length - i - 1, 1)) return false;
-        }
-
-        return true;
-    }
-
+    
     [Benchmark]
     public bool IsPalindrome_FullReverse()
     {

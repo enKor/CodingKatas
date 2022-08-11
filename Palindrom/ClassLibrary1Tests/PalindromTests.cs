@@ -44,27 +44,6 @@ public class PalindromeTests
         Assert.False(c.IsPalindrome_LoopSubString());
     }
 
-
-    [Theory]
-    [InlineData("radar")]
-    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindrome_LoopSubString_NoVars(string s)
-    {
-        var c = new Palindrome { ToCheck = s };
-        Assert.True(c.IsPalindrome_LoopSubString_NoVars());
-    }
-
-    [Theory]
-    [InlineData("radar2")]
-    [InlineData("rad2ar")]
-    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindrome_LoopSubString_NoVars(string s)
-    {
-        var c = new Palindrome { ToCheck = s };
-        Assert.False(c.IsPalindrome_LoopSubString_NoVars());
-    }
-
-
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
