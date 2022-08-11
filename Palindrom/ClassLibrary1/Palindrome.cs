@@ -13,7 +13,7 @@ public class Palindrome
     public string ToCheck { get; set; }
 
     
-    [Benchmark]
+    [Benchmark(Baseline = true)]
     public bool IsPalindrome_ForLoop()
     {
         for (int i = 0; i <= ToCheck.Length / 2; i++)
@@ -24,7 +24,7 @@ public class Palindrome
         return true;
     }
 
-    [Benchmark(Baseline = true)]
+    [Benchmark]
     public bool IsPalindrome_LoopSpan()
     {
         var half = (int)Math.Floor(ToCheck.Length / 2d);
