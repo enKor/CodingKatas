@@ -4,124 +4,141 @@ using Assert = Xunit.Assert;
 
 namespace Tests;
 
-public class PalindromTests
+public class PalindromeTests
 {
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromTest(string s)
+    public void IsPalindrome_LoopSpan(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromLoopSpan());
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_LoopSpan());
     }
 
     [Theory]
     [InlineData("radar2")]
     [InlineData("rad2ar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromTest(string s)
+    public void IsNotPalindrome_LoopSpan(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromLoopSpan());
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_LoopSpan());
     }
 
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromLoopSubStringTest(string s)
+    public void IsPalindrome_LoopSubString(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromLoopSubString());
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_LoopSubString());
     }
 
     [Theory]
     [InlineData("radar2")]
     [InlineData("rad2ar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromLoopSubStringTest(string s)
+    public void IsNotPalindrome_LoopSubString(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromLoopSubString());
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_LoopSubString());
     }
 
 
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromReverseStringTest(string s)
+    public void IsPalindrome_LoopSubString_NoVars(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromReverseString());
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_LoopSubString_NoVars());
     }
 
     [Theory]
     [InlineData("radar2")]
     [InlineData("rad2ar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromReverseString(string s)
+    public void IsNotPalindrome_LoopSubString_NoVars(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromLoopSpan());
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_LoopSubString_NoVars());
     }
-
-    [Theory]
-    [InlineData("radar")]
-    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromCheck_ByOlda_ForLoop(string s)
-    {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromCheck_ByOlda_ForLoop());
-    }
-
-    [Theory]
-    [InlineData("radar2")]
-    [InlineData("rad2ar")]
-    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromCheck_ByOlda_ForLoop(string s)
-    {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromCheck_ByOlda_ForLoop());
-    }
-
 
 
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromCheck_ByOlda_HashCode(string s)
+    public void IsPalindrome_HalfReverseSubstr(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromCheck_ByOlda_HashCode());
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_HalfReverseSubstr());
     }
 
     [Theory]
     [InlineData("radar2")]
     [InlineData("rad2ar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromCheck_ByOlda_HashCode(string s)
+    public void IsNotPalindrome_HalfReverseSubstr(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromCheck_ByOlda_HashCode());
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_HalfReverseSubstr());
     }
 
+    [Theory]
+    [InlineData("radar")]
+    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
+    public void IsPalindrome_ForLoop(string s)
+    {
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_ForLoop());
+    }
+
+    [Theory]
+    [InlineData("radar2")]
+    [InlineData("rad2ar")]
+    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
+    public void IsNotPalindrome_ForLoop(string s)
+    {
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_ForLoop());
+    }
     
 
     [Theory]
     [InlineData("radar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsPalindromCheck_ByRandomGuy_FullReverse(string s)
+    public void IsPalindrome_HashCode(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.True(c.IsPalindromCheck_ByRandomGuy_FullReverse());
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_HashCode());
     }
 
     [Theory]
     [InlineData("radar2")]
     [InlineData("rad2ar")]
     [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
-    public void IsNotPalindromCheck_ByRandomGuy_FullReverse(string s)
+    public void IsNotPalindrome_HashCode(string s)
     {
-        var c = new Palindrom { ToCheck = s };
-        Assert.False(c.IsPalindromCheck_ByRandomGuy_FullReverse());
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_HashCode());
+    }
+
+    [Theory]
+    [InlineData("radar")]
+    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk.hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
+    public void IsPalindrome_FullReverse(string s)
+    {
+        var c = new Palindrome { ToCheck = s };
+        Assert.True(c.IsPalindrome_FullReverse());
+    }
+
+    [Theory]
+    [InlineData("radar2")]
+    [InlineData("rad2ar")]
+    [InlineData("dghjdshgkjsdhgshgdf45h45fh54f7ghdfhjgfhk,gfhk_hkldjhkljghhfgsksfgh.mfhsdfgh25422452hgfdshfm.hgfsksgfhhgjlkhjdlkh.khfg,khfgjhfdhg7f45hf54h54fdghsghdsjkghsdjhgd")]
+    public void IsNotPalindrome_FullReverse(string s)
+    {
+        var c = new Palindrome { ToCheck = s };
+        Assert.False(c.IsPalindrome_FullReverse());
     }
 }

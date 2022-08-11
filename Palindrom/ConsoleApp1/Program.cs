@@ -1,4 +1,4 @@
 ﻿using BenchmarkDotNet.Running;
 using Lib;
 
-var sum = BenchmarkRunner.Run<Palindrom>();
+var sum = BenchmarkRunner.Run<Palindrome>();
