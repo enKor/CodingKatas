@@ -14,7 +14,6 @@ Benchmarks:
 |              IsPalindrome_ForLoop | dghj(...)jhgd [158] |   104.488 ns |  2.8117 ns |   8.1573 ns |   102.679 ns |  1.00 |    0.00 |      - |         - |
 |             IsPalindrome_LoopSpan | dghj(...)jhgd [158] |   296.635 ns |  7.8546 ns |  22.4095 ns |   292.239 ns |  2.85 |    0.27 |      - |         - |
 |        IsPalindrome_LoopSubString | dghj(...)jhgd [158] | 1,995.297 ns | 92.4154 ns | 268.1139 ns | 1,932.810 ns | 19.20 |    2.92 | 0.6027 |   3,792 B |
-| IsPalindrome_LoopSubString_NoVars | dghj(...)jhgd [158] | 1,762.169 ns | 35.2545 ns |  89.0927 ns | 1,751.103 ns | 16.86 |    1.43 | 0.6027 |   3,792 B |
 |          IsPalindrome_FullReverse | dghj(...)jhgd [158] | 1,395.061 ns | 27.7854 ns |  76.5289 ns | 1,371.029 ns | 13.38 |    1.09 | 0.2403 |   1,512 B |
 |    IsPalindrome_HalfReverseSubstr | dghj(...)jhgd [158] |   722.722 ns | 14.1043 ns |  21.1107 ns |   716.672 ns |  6.48 |    0.55 | 0.2031 |   1,280 B |
 |   IsPalindrome_HalfReverseIndexer | dghj(...)jhgd [158] |   746.595 ns | 15.6343 ns |  43.0613 ns |   731.518 ns |  7.17 |    0.74 | 0.2031 |   1,280 B |
@@ -23,7 +22,6 @@ Benchmarks:
 |              IsPalindrome_ForLoop |               radar |     3.115 ns |  0.0833 ns |   0.1195 ns |     3.069 ns |  1.00 |    0.00 |      - |         - |
 |             IsPalindrome_LoopSpan |               radar |     7.209 ns |  0.0550 ns |   0.0487 ns |     7.190 ns |  2.31 |    0.10 |      - |         - |
 |        IsPalindrome_LoopSubString |               radar |    46.534 ns |  0.9314 ns |   1.7032 ns |    46.527 ns | 14.94 |    0.87 | 0.0153 |      96 B |
-| IsPalindrome_LoopSubString_NoVars |               radar |    45.643 ns |  0.6617 ns |   0.5166 ns |    45.668 ns | 14.62 |    0.68 | 0.0153 |      96 B |
 |          IsPalindrome_FullReverse |               radar |   175.690 ns |  3.5348 ns |   8.3320 ns |   171.825 ns | 58.30 |    4.22 | 0.0355 |     224 B |
 |    IsPalindrome_HalfReverseSubstr |               radar |   134.408 ns |  3.5094 ns |   9.7245 ns |   132.923 ns | 43.07 |    3.80 | 0.0381 |     240 B |
 |   IsPalindrome_HalfReverseIndexer |               radar |   121.231 ns |  2.2064 ns |   2.1670 ns |   120.870 ns | 39.03 |    1.74 | 0.0381 |     240 B |
